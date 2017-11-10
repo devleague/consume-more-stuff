@@ -1,0 +1,28 @@
+html {
+  font-family: 'Muli', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#global-nav-header{
+  background-image: url("/assets/doodles.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: center fixed;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+a {
+  color: white;
+}
