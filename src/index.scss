@@ -1,0 +1,107 @@
+html {
+
+  font-family: 'Libre Baskerville', serif;
+}
+
+a {
+  color: white;
+}
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  display: flex;
+  justify-content: center;
+}
+
+#global-nav-header{
+  background-image: url("/assets/doodles.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: center fixed;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+
+.nav-links a:hover {
+  color: #33cccc;
+}
+
+#register-container {
+  justify-content: center;
+}
+
+.register-form {
+  font-size: 1.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .register-btn {
+    background-color: #33cccc;
+    border: none;
+    padding: 5px 40px;
+  }
+}
+
+#login-container {
+  justify-content: center;
+
+  .login-form {
+    font-size: 1.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .login-btn {
+      background-color: #33cccc;
+      border: none;
+      padding: 5px 48px;
+    }
+  }
+}
+
+.single-item {
+  padding-top: 1vw;
+  border: 0.2vw solid black;
+  box-sizing: content-box;
+  a {
+    color: #33cccc;
+  }
+
+}
+
+
+#logout-container {
+  justify-content: center;
+
+  .logout-form {
+    font-size: 1.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .logout-btn {
+      background-color: #33cccc;
+      border: none;
+      padding: 5px 48px;
+    }
+  }
+}
+
+#gator {
+  padding-top: 1.5vw;
+  display: flex;
+  justify-content: center;
+}
