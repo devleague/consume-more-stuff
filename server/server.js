@@ -1,5 +1,6 @@
 const express = require('express');
 const passport = require('passport');
+const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const redis = require('connect-redis')(session);
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 8888;
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, '..', 'public')));
 // enabling json body-parser and encoding
 app.use(bodyParser.urlencoded({ "extended" : false }));
 app.use(bodyParser.json());
