@@ -26,7 +26,8 @@ const ItemList = ({ items, categoryId, categoryName }) => {
           return (
             <Item
             singleItem={ item }
-            key={ idx } />
+            key={ idx }
+            maxWidth={ 200 } />
           );
         })
       }

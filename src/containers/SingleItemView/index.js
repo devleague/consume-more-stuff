@@ -124,7 +124,7 @@ class SingleItemView extends Component {
  }
 
   render() {
-    if(this.props.singleItem.User && localStorage.username === this.props.singleItem.User.username) {
+    if(this.props.singleItem.User && (localStorage.username === this.props.singleItem.User.username)) {
     return(
       <div id="single-item-view">
         { !this.props.singleItem.isEditing &&
@@ -188,9 +188,7 @@ class SingleItemView extends Component {
     );
   } else {
       return(
-        <div className="unauth-single-item">
           <Item singleItem={ this.props.singleItem } singleView={ true } />
-        </div>
       )
     }
   }
