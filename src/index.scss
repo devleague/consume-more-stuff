@@ -1,0 +1,410 @@
+// theme colors
+$bg-color: #FFFFFF;
+$primary-color: #000000;
+$accent-color: #33cccc;
+$contrast-accent: #ffa31a;
+$footer-color: #a6a3a2;
+
+// breakpoint
+$sm-size: 400px;
+
+// mixins
+@mixin flex-style($flow, $justify) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-flow: $flow;
+  justify-content: $justify;
+}
+
+@mixin box-style($style) {
+  -webkit-box-sizing: $style;
+  -moz-box-sizing: $style;
+  box-sizing: $style;
+}
+
+@mixin border-style() {
+  border: 1px solid $primary-color;
+}
+
+/* STYLE SETTINGS  */
+#source {
+  position: relative;
+  min-height: 100%;
+}
+
+html {
+  @include box-style(border-box);
+  font-family: 'Molengo', sans-serif;
+  font-size: 20px;
+}
+
+*, *:before, *:after {
+  @include box-style(inherit)
+}
+
+body {
+  // prevents margin white spaces around page
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 75%;
+  color: $primary-color;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  resize: none;
+}
+
+#global-nav-header {
+  background-image: url("/assets/doodles.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: center fixed;
+}
+
+#logo {
+  background-image: url("/assets/jnkr-logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: center fixed;
+  height: 150px;
+  width: 300px;
+  margin: 0 auto;
+  div {
+  height: 150px;
+  width: 300px;
+  }
+}
+
+.unauth-nav-links {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5vw;
+  a {
+    color: $bg-color;
+  }
+}
+
+.unauth-nav-links a:hover {
+  color: $contrast-accent;
+}
+
+.nav-links{
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5vw;
+  a {
+    color: $bg-color;
+  }
+}
+
+.nav-links a:hover {
+  color: $accent-color;
+}
+//-------Burger Bar----------
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 20px;
+  left: 26px;
+  top: 26px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+  position: fixed;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  opacity: 0.8;
+  padding: 2em 1em 0;
+  font-size: 0.9em;
+}
+
+.bm-menu a {
+  color: $bg-color;
+  padding: 5px;
+}
+
+.bm-menu a:hover {
+  color: $accent-color;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: $contrast-accent;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+//----------------------------
+.single-user {
+  padding-bottom: 5px;
+}
+// -------------------------
+// errors
+
+.errors {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  word-wrap: normal;
+  text-align: center;
+
+}
+//----------------------------
+#register-container {
+  justify-content: center;
+  .inner-form-container {
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 120%;
+    .form-header {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.register-form {
+  font-size: 60%;
+  @include flex-style (row wrap, center);
+  .register-btn {
+    background-color: $accent-color;
+    border: none;
+    padding: 5px 40px;
+  }
+}
+//----------------------------
+#login-container {
+  position: relative;
+  .login-form {
+    @include flex-style(row wrap, center);
+    padding-bottom: 40px;
+    font-size: 60%;
+    }
+    .login-btn {
+      background-color: $accent-color;
+      border: none;
+      padding: 5px 48px;
+    }
+  }
+//----------------------------
+#user-welcome {
+  text-align: right;
+  font-size: 120%;
+  padding-right: 5px;
+}
+//----------------------------
+.category-header {
+  font-size: 150%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  a{
+    color: $accent-color;
+  }
+
+}
+
+.item-list {
+  @include flex-style(row nowrap, flex-start);
+  border-top: 1px solid $footer-color;
+  border-bottom: 1px solid $footer-color;
+  width: 100%;
+  overflow: auto;
+  padding: 2px 16px 15px;
+  margin-bottom: 40px;
+
+  .single-item {
+    min-width: 300px;
+    transition: 0.5s;
+    padding: 16px;
+    a {
+      color: $accent-color;
+    }
+    .item-img {
+      // max-width: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+      img {
+        // max-height: 100%;
+        width: inherit;
+      }
+  }
+}
+.card-details {
+  font-size: 60%;
+}
+.single-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+// ---------------------------
+#auth-single-item-view {
+  width: 100%;
+  .single-item-name {
+    padding-top: 10px;
+  }
+  .item-img {
+    width: 50%;
+    padding-top: 10px;
+  }
+}
+//----------------------------
+#unauth-single-item-view {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+  // position: relative;
+  padding-bottom: 10px;
+  .single-item {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // margin: 10px;
+   }
+  .single-item-name {
+    padding-top: 10px;
+    padding-right: 30px;
+    font-size: 120%;
+  }
+  .item-img {
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid black;
+  }
+  .single-item-details {
+    padding-left: 30px;
+  }
+  .card-details {
+    font-size: 70%;
+    padding-left: 20px;
+  }
+}
+//----------------------------
+.uploaded-img {
+  max-width: 600px;
+  padding-top: 10px;
+}
+
+
+#product-listing-container {
+  a {
+    color: $accent-color;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+  }
+  .product-info {
+    padding-right: 20px;
+    border-right: 1px lightgray solid;
+    p {
+      font-size: 70%;
+    }
+  }
+}
+
+#listing-details {
+  display: flex;
+  justify-content: center;
+}
+
+#new-item-form-container {
+  justify-content: center;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 40px;
+  .new-item-form {
+    padding-top: 10px;
+    padding-left: 40px;
+  }
+  .new-item-submit-btn {
+    background-color: $accent-color;
+    border: none;
+    padding: 5px 75px;
+  }
+}
+//----------------------------
+#logout-container {
+  justify-content: center;
+  .logout-form {
+    font-size: 100%;
+    @include flex-style(row wrap, center);
+    .logout-btn {
+      background-color: $accent-color;
+      border: none;
+      padding: 5px 48px;
+    }
+  }
+}
+
+#gator {
+  @include flex-style(row wrap, center);
+  padding-top: 1.5vw;
+}
+
+#footer {
+  background-color: $footer-color;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  position: sticky;
+  height: 40px;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  .footer-details {
+    font-size: 60%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 480px){
+  a {
+    font-size: 100%;
+  }
+  .user-side-bar {padding-top: 15px;}
+  .user-side-bar a {font-size: 100%;}
+}
