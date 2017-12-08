@@ -5,6 +5,9 @@ $accent-color: #33cccc;
 $contrast-accent: #ffa31a;
 $footer-color: #a6a3a2;
 
+// breakpoint
+$sm-size: 400px;
+
 // mixins
 @mixin flex-style($flow, $justify) {
   display: -webkit-box;
@@ -248,9 +251,7 @@ textarea {
   margin-bottom: 40px;
 
   .single-item {
-    min-width: 20%;
-    max-width: 20%;
-    // border: 1px solid black;
+    min-width: 300px;
     transition: 0.5s;
     padding: 16px;
     a {
