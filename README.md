@@ -1,4 +1,4 @@
-# Consume More Stuff
+# Consume More Stuff by Team CRUDs
 > A custom CMS for personal product sale
 
 ## Introduction
@@ -142,3 +142,28 @@ The instructors will provide a tech lead role, and will need to approve design a
 - make prettier
 - integrate email service (mailgun, sendgrid)
 - add supertest tests
+
+
+#################################  CRUDS   #############################################
+
+### CREATE DATABASE LOCALLY
+-In Postgres
+	- create user admin with password 'thecruds';
+	- create database consume_more_stuff with owner admin;
+
+-In server/db
+	-create a config.js file
+	-In config file create a module export with 'user', 'password', 'database'
+
+	-fill in credentials for your local database
+	
+```
+module.exports = {
+	user: 'user',
+	password: 'password',
+	database: 'database name'
+}
+```
+
+
+###
