@@ -61,71 +61,96 @@ class NewItem extends Component {
             name="name"
             value={this.state.newItem.name}
             onChange={this.handleInput}/>
-
           </div>
-              <br/>
-              <input type="text"
-              placeholder="Upload image..."
-              name="image"
-              value={this.state.newItem.image}
-              onChange={this.handleInput}/>
 
-              <br/>
-              <input type="text"
-              name="price"
-              placeholder="Price (required)"
-              price="price"
-              value={this.state.newItem.price}
-              onChange={this.handleInput}/>
+          <br/>
+          <div className="form-row">
+            <span>Price</span>
+            <input type="text"
+            name="price"
+            placeholder="(required)"
+            price="price"
+            value={this.state.newItem.price}
+            onChange={this.handleInput}/>
+          </div>
 
-              <br/>
-              <select 
-              name="condition"
-              value={this.state.newItem.conditon}
-              onChange={this.handleInput}>
-                <option value="">Condition</option>
-                <option value="5">New</option>
-                <option value="4">Good</option>
-                <option value="3">Fair</option>
-                <option value="2">Worn</option>
-                <option value="1">Used</option>
-              </select>
+          <br/>
+          <div className="form-row">
+            <span>Condition</span>
+            <select 
+            name="condition"
+            value={this.state.newItem.conditon}
+            onChange={this.handleInput}>
+              <option value="">Select...</option>
+              <option value="5">New</option>
+              <option value="4">Good</option>
+              <option value="3">Fair</option>
+              <option value="2">Worn</option>
+              <option value="1">Used</option>
+            </select>
+          </div>
 
-              <br/>
-              <select
-              name="category"
-              value={this.state.newItem.category}
-              onChange={this.handleInput}>
-                <option value="">Category</option>
-                <option value="1">Vehicles</option>
-                <option value="2">Appliances</option>
-                <option value="3">Computers</option>
-                <option value="4">Furniture</option>
-              </select>
+          <br/>
+          <div className="form-row">
+          <span>Category</span>
+            <select
+            name="category"
+            value={this.state.newItem.category}
+            onChange={this.handleInput}>
+              <option value="">Select...</option>
+              <option value="1">Vehicles</option>
+              <option value="2">Appliances</option>
+              <option value="3">Computers</option>
+              <option value="4">Furniture</option>
+            </select>
+          </div>
 
-              <br/>
-              <input type="text"
-              name="model"
-              placeholder="Model / Make"
-              value={this.state.newItem.model}
-              onChange={this.handleInput}/>
+          <br/>
+          <div className="form-row">
+          <span>Model / Make</span>
+            <input type="text"
+            name="model"
+            placeholder="Model / Make"
+            value={this.state.newItem.model}
+            onChange={this.handleInput}/>
+          </div>
 
-              <br/>
-              <input type="text"
-              name="dimensions"
-              placeholder="Dimensions"
-              value={this.state.newItem.dimensions}
-              onChange={this.handleInput}/>
 
-              <br/>
-              <textarea name="notes" placeholder="Notes" value={this.state.newItem.notes} onChange={this.handleInput} 
-              id="" cols="30" rows="10">Notes: </textarea>
+          <br/>
+          <div className="form-row">
+            <span>Dimensions</span>  
+            <input type="text"
+            name="dimensions"
+            placeholder="L x W x H"
+            value={this.state.newItem.dimensions}
+            onChange={this.handleInput}/>
+          </div>
 
-              <br/>
-              <input type="submit"/>
+          <br/>
+          <div className="form-row">
+            <span>Upload image</span>
+            <input type="text"
+            placeholder="Upload image..."
+            name="image"
+            value={this.state.newItem.image}
+            onChange={this.handleInput}/>
+          </div>
 
+          <br/>
+          <div className="form-text-area">
+            <textarea name="notes" 
+            placeholder="Notes" 
+            value={this.state.newItem.notes} 
+            onChange={this.handleInput} 
+            id="" cols="60" rows="10">Notes: </textarea>
+          </div>
+
+            <br/>
+          <div className="form-new">
+            <button type="submit">Create New Item</button>
+          </div>
             </form>
-          </div>
+        </div>
     )
   }
 }// end NewItem
