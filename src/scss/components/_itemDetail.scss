@@ -17,19 +17,20 @@
 .main-content {
   background-color: $background-color;
   color: $grey;
+  max-width: 900px;
 }
 
 .item-detail-category-row {
-  border: 1px solid red;
+  // border: 1px solid red;
   display: inline-flex;
   justify-content: space-between;
   width: 100%;
-  // padding: 10px;
-  // margin: 10px;
+  // padding-right: 100px;
+
 }
 
 .category-title {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .page-options-container {
@@ -45,10 +46,8 @@
   align-items: center;
 }
 .icon {
-  padding: 7px;
+  padding: 3px;
 }
-
-
 
 .button {
   @include submit-button;
@@ -61,14 +60,15 @@
   
 }
 
-.detail-view-container {
+.item-image-and-detail-container {
   display: inline-flex;
   width: 100%;
+  // max-width: 840px;
 }
-
 .item-detail-container {
   width: 100%;
 }
+
 
 .item-title-row {
   font-size: 30px;
@@ -102,7 +102,7 @@
   display: flex;
   justify-content: flex-end;
 }
-.add-to-cart-button-container{
+.add-to-cart-button-container {
   margin-right: 10px;
 }
 
@@ -110,5 +110,9 @@
   display: inline-flex;
   justify-content: flex-end;
   width: 100%;
+}
 
+.footer-icon-container {
+  display: inline-flex;
+  margin-right: 20px;
 }

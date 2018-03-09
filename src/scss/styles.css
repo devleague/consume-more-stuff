@@ -462,16 +462,16 @@ button:hover {
 
 .main-content {
   background-color: #f9f9f9;
-  color: #5E6572; }
+  color: #5E6572;
+  max-width: 900px; }
 
 .item-detail-category-row {
-  border: 1px solid red;
   display: inline-flex;
   justify-content: space-between;
   width: 100%; }
 
 .category-title {
-  padding-left: 20px; }
+  padding-left: 30px; }
 
 .page-options-container {
   display: flex;
@@ -484,21 +484,24 @@ button:hover {
   align-items: center; }
 
 .icon {
-  padding: 7px; }
+  padding: 3px; }
 
 .button {
   border-radius: 10px;
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
   color: #fff;
   padding: 5px 10px;
-  transition: background-position .5s; }
+  transition: background-position .5s;
+  -webkit-box-shadow: 13px 25px 59px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 13px 25px 59px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 13px 25px 59px 0px rgba(0, 0, 0, 0.18); }
 
 .item-detail-image {
   height: 300px;
   width: 300px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); }
 
-.detail-view-container {
+.item-image-and-detail-container {
   display: inline-flex;
   width: 100%; }
 
@@ -536,3 +539,7 @@ button:hover {
   display: inline-flex;
   justify-content: flex-end;
   width: 100%; }
+
+.footer-icon-container {
+  display: inline-flex;
+  margin-right: 20px; }

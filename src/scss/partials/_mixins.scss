@@ -16,6 +16,9 @@
   color: $white;
   padding: 5px 10px;
   transition: background-position .5s;
+  -webkit-box-shadow: 13px 25px 59px 0px rgba(0,0,0,0.18);
+  -moz-box-shadow: 13px 25px 59px 0px rgba(0,0,0,0.18);
+  box-shadow: 13px 25px 59px 0px rgba(0,0,0,0.18);
 
 }
 
