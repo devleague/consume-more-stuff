@@ -528,6 +528,9 @@ button:hover {
 .item-owner-row {
   padding: 20px 0 20px; }
 
+.edit-item-link {
+  color: #9FC2CC; }
+
 .item-button-row {
   display: flex;
   justify-content: flex-end; }
