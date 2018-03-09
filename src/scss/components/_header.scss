@@ -1,0 +1,38 @@
+@import '../partials/_variables.scss';
+@import '../partials/_mixins.scss';
+
+// header styles
+.header-bar {
+  border-bottom: 1px solid $border-color;
+}
+
+.logo-container {
+  margin: 16px 50px;
+
+  h1 {
+    color: $seaweed;
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+
+.loggedin-links, .loggedout-links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 50px;
+
+  p {
+    margin-right: 20px;
+  }
+
+  .register-link {
+    color: $grey;
+    margin: 0 20px;
+  }
+
+  button {
+    @include square-button;
+  }
+}

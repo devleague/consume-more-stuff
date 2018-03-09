@@ -1,0 +1,28 @@
+@import '../partials/_variables.scss';
+
+// nav styles
+.nav-bar {
+  display: flex;
+  justify-content: center;
+
+  .header-title {
+
+  }
+
+  li {
+    margin: 20px 0px;
+  }
+
+  h2 {
+    color: $grey;
+  }
+
+  li a {
+    color: $black;
+  }
+
+  .svg-inline--fa {
+    color: $seaweed;
+    margin-right: 20px;
+  }
+}

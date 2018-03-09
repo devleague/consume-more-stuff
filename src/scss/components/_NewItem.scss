@@ -1,0 +1,110 @@
+
+@import '../partials/_variables.scss';
+
+.main-content {
+  background-color: $background-color;
+}
+
+.new-item-form {
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 55px;
+  background-color: $background-color;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font: 14px sans-serif;
+  text-align: center;
+  color: $grey;
+}
+
+h1 {
+  // border-bottom: 2px solid #6D87F4;
+  padding: 15px 8px;
+  font-weight: bold;
+}
+
+.form-row {
+  position: relative;
+  text-align: left;
+  margin-bottom: 25px;
+  // display: block;
+}
+
+.new-item-form .form-row > span {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 180px;
+  text-align: right;
+  padding: 8px 25px;
+
+}
+
+.form-row input {
+  position: relative;
+  color:  #494949;
+  box-sizing: border-box;
+  width: 240px;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 12px 18px;
+  border: 1px solid #dbdbdb;
+
+}
+
+input {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border: 1px solid #494949;
+  transition: 0.3s;
+}
+select {
+  outline: none;
+  background-color: white;
+  color:  #494949;
+  box-sizing: border-box;
+  max-width: 240px;  
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 12px 18px;
+  border: 1px solid #dbdbdb;
+  
+}
+
+textarea {
+  // box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);  
+  outline: none;  
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  max-width: 400px;
+}
+
+button {
+    outline: none;  
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+   }
+
+  
+
+button:hover {
+  background-position: right center;
+    // background-color: lightseagreen;
+    // color: bisque;
+    // transition: 0.3s ease;
+  }

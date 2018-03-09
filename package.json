@@ -1,0 +1,51 @@
+{
+  "name": "consume-more-stuff",
+  "version": "1.0.0",
+  "description": "> A custom CMS for personal product sale",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levibrooke/consume-more-stuff.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levibrooke/consume-more-stuff/issues"
+  },
+  "homepage": "https://github.com/levibrooke/consume-more-stuff#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^1.0.3",
+    "bookshelf": "^0.12.1",
+    "connect-redis": "^3.3.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "knex": "^0.14.4",
+    "nodemon": "^1.17.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "build-css": "node-sass-chokidar src/scss/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/scss/ -o src/scss --watch --recursive",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2"
+  },
+  "proxy": "http://localhost:8080"
+}

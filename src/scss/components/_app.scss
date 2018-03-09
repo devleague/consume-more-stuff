@@ -1,0 +1,32 @@
+@import '../partials/_variables.scss';
+
+// structure of App
+// header, nav, main
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.nav-bar {
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid $border-color;
+  position: fixed;
+}
+
+.page-content {
+  flex-grow: 1;
+  position: relative;
+  margin-left: 250px;
+  background-color: $background-color;
+}
