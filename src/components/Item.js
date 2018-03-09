@@ -17,17 +17,17 @@ const Item = ({
     return (
       <div className="item">
         <ul>
-        { name && <li>Name: {name}</li> }
-        { price && <li>Price: {price}</li> }  
-        { model && <li>Model: {model}</li> }
+        { name && <li>{name.toUpperCase()}</li> }
+        { price && <li>$ {price}</li> }  
+        { model && <li>Model / Make: {model}</li> }
         { dimensions && <li>Dimensions: {dimensions}</li> }
         { created_at && <li>Created at: {created_at}</li> }
         { updated_at && <li>Updated at: {updated_at}</li> }
-        { user && <li>User: {user.username}</li> }
-        { category && <li>Category: {category.category}</li> }
+        { user && <li>Posted by: {user.username}</li> }
+        { category && <li> > {category.category.toUpperCase()}</li> }
         { condition && <li>Condition: {condition.condition}</li> }
-        { itemStatus && <li>Status: {itemStatus.status}</li> }
-        { notes && <li>Notes: {notes}</li> }
+        { itemStatus && <li>Status: {itemStatus.status.toUpperCase()}</li> }
+        { notes && <li>Description: {notes}</li> }
         { image && <li>Image: {image}</li> }
         </ul>
       </div>
